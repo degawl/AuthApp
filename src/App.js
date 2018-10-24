@@ -9,10 +9,10 @@ class App extends Component {
     componentWillMount() {
         firebase.initializeApp({
                 apiKey: Config.FIREBASE_API_KEY,
-                authDomain: 'authapp-cd849.firebaseapp.com',
-                databaseURL: 'https://authapp-cd849.firebaseio.com',
+                authDomain: Config.AUTH_DOMAIN,
+                databaseURL: Config.DB_URL,
                 projectId: Config.PROJECT_ID,
-                storageBucket: 'authapp-cd849.appspot.com',
+                storageBucket: Config.STORAGE_BUCKET,
                 messagingSenderId: Config.MESSAGING_SENDER_ID
         });
     }
