@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+import Config from 'react-native-config';
 import firebase from 'firebase';
 import { Header } from './components/common';
+import LoginForm from './components/LoginForm';
 
 class App extends Component {
     componentWillMount() {
         firebase.initializeApp({
-                apiKey: 'AIzaSyAHyEo0K8y5qtMPzqjdoFN6-4EE_BY0y3I',
+                apiKey: Config.FIREBASE_API_KEY,
                 authDomain: 'authapp-cd849.firebaseapp.com',
                 databaseURL: 'https://authapp-cd849.firebaseio.com',
-                projectId: 'authapp-cd849',
+                projectId: Config.PROJECT_ID,
                 storageBucket: 'authapp-cd849.appspot.com',
-                messagingSenderId: '244392643032'
+                messagingSenderId: Config.MESSAGING_SENDER_ID
         });
     }
-    
+
     render() {
         return (
             <View>
                 <Header headerText={'AuthApp'} />
-                <Text>Auth</Text>
+                <LoginForm />
             </View>
         );
     }
