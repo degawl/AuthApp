@@ -14,7 +14,7 @@ class LoginForm extends Component {
                         onChangeText={text => this.setState({ text })}
                     />
                 </CardSection>
-                <CardSection></CardSection>
+                <CardSection />
                 <CardSection>
                     <Button>Login</Button>
                 </CardSection>
